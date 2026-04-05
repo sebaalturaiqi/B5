@@ -10,7 +10,7 @@ format:
 
 **Question: are NBA Players really taller than most people?**
 
-![](../../assets/nba_players_are_tall.png){.r-stretch}
+![](../../assets/nba_players_are_tall.png){fig-align="center" .r-stretch}
 
 
 ## Population
@@ -22,14 +22,14 @@ format:
 
 **Sample** (عينة): is subset of *Population*. Our sample is NBA Players (at some point in time).
 
-![](../../assets/population_sample.png){.r-stretch}
+![](../../assets/population_sample.png){fig-align="center" .r-stretch}
 
 
 ## Thinking in levels about population and sample
 
-In reality, we don't always have access to all population. Hence, it is helpful to think in levels, The smallest of which is the **Subject**:
+In reality, we don't always have access to all population. Hence, it is helpful to think in levels, The smallest of which is the **Participant** (مشارك):
 
-![](../../assets/population_sampling_reality.png)
+![](../../assets/population_sampling_reality.png){fig-align="center" .r-stretch}
 
 ::: {.notes}
 
@@ -70,18 +70,21 @@ Can you distinguish them the following tabl e?
 
 **Descriptive Statistics** (إحصاء وصفي) summarizes qualities of a group (of people or things):
 
-1. Using a **Statistic / Parameter** (إحصاءة) (mean, median, variance, range, ..etc.)  
-   Numerical. It sums up variables across subjects to describe them in general.
-2. Using a **Graph / Plot** (رسم بياني) (points, lines, colors, size, text, ..etc.)  
-   Visual. They simplify the data by doing local statistics (e.g., bins of bar plot).
+1. **Statistic / Parameter** (إحصاءة) (mean, median, variance, range, ..etc.)  
+2. **Graph / Plot** (رسم بياني) (points, lines, colors, size, text, ..etc.)  
 
-In both cases, we are interested in look at **multipe** statistics, and **multiple** graphs, before we move on to making conclusions.
+In both cases, we are interested in **multipe** statistics and **multiple** graphs, before we move on to making conclusions.
+
+::: {.notes}
+- Numerical. It sums up variables across subjects to describe them in general.
+- Visual. They simplify the data by doing local statistics (e.g., bins of bar plot).
+:::
 
 ## Inferentail Statistics
 
 **Inferential Statistics** (احصاء استدلالي) goes from description to **drawing conclusions**.
 
-![](../assets/inferential_statistics.png){.r-stretch}
+![](../assets/inferential_statistics.png){fig-align="center" .r-stretch}
 
 At its heart, statistics is the bridge between raw observation and useful information.
 
