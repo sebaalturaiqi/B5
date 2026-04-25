@@ -1,45 +1,43 @@
-# Instructions
+# Adult Income Classification ML Project
 
-## Lab Setup
+## Project Goal
+The primary goal of this project is to automate the financial decision-making process. By utilizing machine learning, we predict whether an individual's annual income exceeds $50,000 based on census data, including demographics, education, and employment history.
 
-### A. Local Setup
+---
 
-1. Use `git clone` to clone the repository
-2. Use `uv sync` to install the dependencies in a virtual environment
+## Machine Learning Task & Implementation
+* **Task:** Binary Classification.
+* **Library:** AutoGluon (Applied Machine Learning).
+* **Why ML?** Implementing Machine Learning reduces human error, provides faster results, and can handle complex patterns in data that manual solutions cannot easily identify. It ensures scalability and consistent decision-making across large datasets.
 
-> [How to run VS Code Notebooks](https://code.visualstudio.com/docs/datascience/jupyter-notebooks)
+---
 
-### B. Colab Setup
+## Data & Feature Engineering
+* **Dataset:** Adult Income Dataset (32,561 records).
+* **Feature Importance:** Through permutation shuffling, `Capital-gain` was identified as the most influential feature, followed by `Marital-status` and `Age`.
+* **Preprocessing:** AutoGluon handled automated feature engineering, including categorical encoding and missing value imputation.
 
-1. Open the notebook in Colab
-2. Use `git clone` to clone the repository (to get helper files, assets, and datasets)
-3. Run `%cd <path to the repository>`
-4. Sync dependencies from `pyproject.toml` into the Colab system environment: `!uv sync --system` (notice the `!` prefix tells notebooks this is a shell command)
+---
 
-> Remember to save your work. Any files created in Colab will be lost if you don't save them elsewhere (Download).
+## Model Evaluation & Metrics
+* **Best Model:** WeightedEnsemble_L2.
+* **Accuracy:** The model achieved a final accuracy of approximately **87.5%** on the test set.
+* **Performance Assessment:** Based on the Confusion Matrix, the model shows high precision in identifying the majority class (<=50K), confirming its reliability for filtering purposes.
 
-### C. Code Locally, Run in Colab (Hybrid)
+---
 
-> See: [Connect notebooks to Colab servers](https://marketplace.visualstudio.com/items?itemName=google.colab)>
+## Deployment & Deliverables
+This project includes a local deployment via an interactive dashboard:
+* **Interactive Inference:** A user-friendly interface built with `ipywidgets` allows for real-time predictions.
+* **Model Persistence:** The trained predictor is saved and can be reloaded using `TabularPredictor.load()` for future inference without retraining.
 
-## How to Download Kaggle Dataset to Colab?
+---
 
-First, obtain your API token from Kaggle:
-
-1. Go to [**Kaggle Settings** ](https://www.kaggle.com/settings)
-2. Scroll to the **API** section and click **Create New Token**
-3. Copy that token and insert it as a Colab secret under with the label `KAGGLE_API_TOKEN`
-
-```python
-import os
-
-# This reads your colab secrets
-# and set the environment variables on them
-from google.colab import userdata
-os.environ['KAGGLE_KEY'] = userdata.get('KAGGLE_API_TOKEN')
-os.environ['KAGGLE_USERNAME'] = "KAGGLE_COLAB"
-
-# Example Dataset
-dataset_name = "shuyangli94/food-com-recipes-and-user-interactions"
-!kaggle datasets download -d {dataset_name} 
-```
+## Setup and Usage
+1.  **Clone the Repository:** Download the project folder containing the notebook and model artifacts.
+2.  **Install Dependencies:**
+    ```bash
+    pip install autogluon ipywidgets pandas matplotlib
+    ```
+3.  **Run the Notebook:** Open the `.ipynb` file in Google Colab or a local Jupyter environment.
+4.  **Execute Inference:** Run the final cells to launch the **Interactive Prediction App** and test the model with custom inputs.
