@@ -1,3 +1,4 @@
+# open in colab [https://colab.research.google.com/drive/1RVb9gxtn4cG_JzYJ7bnVpFHbtgH3xocd?usp=sharing]
 # Adult Income Classification ML Project
 
 ## Project Goal
